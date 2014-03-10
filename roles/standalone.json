@@ -1,0 +1,19 @@
+{
+  "name": "chronos",
+  "json_class": "Chef::Role",
+  "description": "Role for standalone chronos install",
+  "chef_type": "role",
+  
+  "default_attributes": {},
+  "override_attributes": {
+    "chronos": {
+      "jar_source": "http://bassnas.corp.espn.pvt/readybass/users/kiddm/chronos-2.1.0_mesos-0.14.0-rc4.jar"
+	},
+	"mesos": {
+       "version": "0.15.0"
+	}
+  },
+  "run_list": [
+    "recipe[chronos]"
+  ]
+}
